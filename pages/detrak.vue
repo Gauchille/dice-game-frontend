@@ -64,7 +64,6 @@
     </div>
     <br />
 
-    <!-- Affichage du score final -->
     <div v-if="finalScore !== null" class="final-score">
       Score Final : {{ finalScore }}
     </div>
@@ -76,19 +75,11 @@ import { computed, ref } from "vue";
 import type { Dice, Dices, Grid } from "~/types/game";
 import { useDetrakScore } from "~/composables/useDetrakScore";
 
-// const grid = ref<Grid>(
-//   Array(5)
-//     .fill(null)
-//     .map(() => Array(5).fill(""))
-// );
-
-const grid = ref<Grid>([
-  ["1", "2", "3", "4", "5"],
-  ["2", "3", "4", "5", "6"],
-  ["3", "4", "5", "6", "1"],
-  ["4", "5", "", "", ""], // Deux cases vides
-  ["5", "6", "1", "2", "3"],
-]);
+const grid = ref<Grid>(
+  Array(5)
+    .fill(null)
+    .map(() => Array(5).fill(""))
+);
 
 const {
   isPairOfCellAvailable,
