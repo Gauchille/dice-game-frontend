@@ -13,7 +13,6 @@
     />
     <NumberSelector v-model:initNumber="grid[0][0]" />
 
-    <!-- Contrôles de jeu directement intégrés -->
     <div v-if="grid[0][0]" class="game-controls">
       <div class="dice-container">
         <div
@@ -167,21 +166,18 @@ h1 {
   transition: all 0.2s ease;
 }
 
-/* Style pour les cases disponibles */
 .cell.available {
   background-color: rgba(66, 184, 131, 0.1);
   border: 2px solid #42b883;
   cursor: pointer;
 }
 
-/* Effet hover sur les cases disponibles */
 .cell.available:hover {
   background-color: rgba(66, 184, 131, 0.3);
   transform: scale(1.05);
   box-shadow: 0 0 10px rgba(66, 184, 131, 0.3);
 }
 
-/* Style spécial pour la première case */
 .cell.start-cell {
   background-color: rgba(66, 184, 131, 0.2);
   border: 2px dashed #42b883;
@@ -200,7 +196,6 @@ h1 {
   }
 }
 
-/* Cases non disponibles */
 .cell:not(.available):not(.start-cell) {
   cursor: not-allowed;
 }
@@ -334,7 +329,6 @@ h1 {
   font-weight: bold;
 }
 
-/* Style spécifique pour la cellule de somme au survol */
 .cell.sum:hover {
   transform: none;
   cursor: default;
